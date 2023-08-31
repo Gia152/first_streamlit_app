@@ -24,7 +24,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(my_fruit_list)
 
-  
 #create the repeatable code block (called a function)
 def get_fruityvice_data(this_fruit_choice):
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
@@ -47,7 +46,6 @@ except URLError as e:
 
 #don't run anything past here while we troubleshoot
 streamlit.stop()
-
 
 #import snowflake.connector
 # Normalise the json version of the response
