@@ -49,11 +49,11 @@ except URLError as e:
 
 #import snowflake.connector
 # Normalise the json version of the response
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # output in the table format 
-streamlit.dataframe(fruityvice_normalized)
+#streamlit.dataframe(fruityvice_normalized)
 
-streamlit.header("The fruit load list contains")
+streamlit.header("The fruit load list contains:")
 #snowflake related functions
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
