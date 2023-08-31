@@ -44,9 +44,6 @@ except URLError as e:
 
 #streamlit.text(fruityvice_response.json()) # just writes the data to the screen
 
-#don't run anything past here while we troubleshoot
-#streamlit.stop()
-
 #import snowflake.connector
 # Normalise the json version of the response
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
@@ -66,6 +63,8 @@ if streamlit.button('Get Fruit Load List'):
     my_data_rows = get_fruit_load_list()
     streamlit.dataframe(my_data_rows)
 
+#don't run anything past here while we troubleshoot
+streamlit.stop()
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?', 'Kiwi')
 streamlit.write('The user entered', add_my_fruit)
